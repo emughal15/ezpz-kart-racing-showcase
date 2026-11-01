@@ -4,8 +4,6 @@ A multiplayer arcade kart racer on Roblox, written in Luau.
 
 **▶ Play it:** https://www.roblox.com/games/101855942310096
 
-![The EZPZ Paddock lobby](media/lobby-paddock.jpg)
-
 This repository is a **showcase**. It has the design notes and a handful of complete modules from the game. The full
 game (about 60 scripts, roughly 17,000 lines) lives in a private repo.
 
@@ -85,12 +83,6 @@ server-side timing. The code is kept private on purpose.
 - Holds 60 FPS on large maps with streaming on. The client holds about 5k of a track's 23k parts at a time.
 - Profiling with `ScriptProfilerService` cut client RenderStepped time on the busiest track from 307 to 127 ms per
   6 s, mostly by throttling and distance-culling the animated crowd.
-
-## How it was built
-I designed, directed, tested and shipped EZPZ using AI-assisted development (mainly Claude Code, plus ChatGPT and
-Roblox Studio's Assistant). Scripts are kept as files and live-synced into Studio with **Rojo**. Track layouts were
-designed in **Python** (numpy, scipy, shapely, matplotlib). Every feature was checked in playtests with scripted
-autopilot runs and measurements before it shipped.
 
 ## About this repo
 These modules depend on the game's config and services, so they won't run on their own; they're here to read.
