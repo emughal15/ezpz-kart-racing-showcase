@@ -1,0 +1,23 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  selene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Selene
+        env:
+          SELENE_VERSION: "0.27.1"
+        run: |
+          curl -fsSL -o selene.zip "https://github.com/Kampfkarren/selene/releases/download/${SELENE_VERSION}/selene-${SELENE_VERSION}-linux.zip"
+          unzip -q selene.zip -d "$HOME/.selene"
+          chmod +x "$HOME/.selene/selene"
+          echo "$HOME/.selene" >> "$GITHUB_PATH"
+
+      - name: Run Selene
+        run: selene src
