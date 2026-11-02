@@ -1,5 +1,7 @@
 # EZPZ Kart Racing
 
+[![Lint](https://github.com/emughal15/ezpz-kart-racing-showcase/actions/workflows/lint.yml/badge.svg)](https://github.com/emughal15/ezpz-kart-racing-showcase/actions/workflows/lint.yml)
+
 A multiplayer arcade kart racer on Roblox, written in Luau.
 
 **▶ Play it:** https://www.roblox.com/games/101855942310096
