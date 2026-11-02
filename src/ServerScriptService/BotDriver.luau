@@ -184,7 +184,6 @@ function Bot.step(r, dt, useItem)
 	local rightV = fwd:Cross(Vector3.yAxis)
 	fSpeed = vel:Dot(fwd)
 	local lSpeed = vel:Dot(rightV)
-	local uSpeed = vel.Y
 
 	-- drafting: bots slipstream too
 	local D = Config.Draft

@@ -1,1 +1,5 @@
 std = "roblox"
+
+[lints]
+# The game is written in a compact style: short if/for bodies stay on one line
+multiple_statements = "allow"
